@@ -106,8 +106,7 @@
   <div class="container text-center py-5 overlay mt-4">
     <h1 class="display-4">Wedding Invitation</h1>
     <p class="subtitle">Basha <br>weds <br>Basheera</p>
-    <p><br>Bilal Shadi Khana Nehru Nagar, Rajahmundry</p>
-    <p>Sunday, 8th June 2025</p>
+    <p><br>Bilal Shadi Khana Nehru Nagar, Rajahmundry. Sunday, 8th June 2025</p>
     <p class="islamic-quote">"And We created you in pairs." – Quran 78:8</p>
     <h2 class="mt-4">Shaik Gouse Basha & Shaik Basheera</h2>
     <p class="lead">Together with their families, joyfully invite you to their Nikah and Reception</p>
@@ -173,7 +172,7 @@
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        el.textContent = `${days} :${hours} :${minutes} :${seconds}`;
+        el.textContent = `${days} : ${hours} : ${minutes} : ${seconds}`;
       }
 
       const timer = setInterval(update, 1000);
