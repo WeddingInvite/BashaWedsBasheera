@@ -23,7 +23,7 @@
     }
 
     .overlay {
-      background-color: rgba(255, 182, 193, 0.88); /* Light pink background */
+      background-color: rgba(255, 182, 193, 0.88);
       padding: 2rem;
       border-radius: 15px;
     }
@@ -99,6 +99,19 @@
       padding-left: 1rem;
       color: #6a1b9a;
     }
+
+    .profile-section img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .card-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -107,7 +120,40 @@
     <h1 class="display-4">Wedding Invitation</h1>
     <p class="subtitle">Basha <br>weds <br>Basheera</p>
     <p><br>Bilal Shadi Khana Nehru Nagar, Rajahmundry. Sunday, 8th June 2025</p>
+    <!-- WhatsApp Contact Section -->
+<div class="card-box text-center mt-4">
+  <p>Feel free to contact us directly on WhatsApp!</p>
+  <a href="https://wa.me/916301526098" target="_blank" class="btn btn-success btn-lg">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" style="width:24px; vertical-align: middle; margin-right: 8px;">
+    Message Us on WhatsApp
+  </a>
+</div>
+
     <p class="islamic-quote">"And We created you in pairs." – Quran 78:8</p>
+
+    <!-- Bride Section -->
+    <div class="card-box profile-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/3048/3048392.png" alt="Bride Icon">
+      <h3>Bride</h3>
+      <p><strong>Name:</strong> Shaik Gouse Basha</p>
+      <p><strong>Father:</strong> Shaik Ahmed Valli</p>
+      <p><strong>Mother:</strong> Shaik Shafiya</p>
+      <p><strong>Address:</strong> Sangham Colony-2, Mandapeta </p>
+      
+    </div>
+
+    <!-- Groom Section -->
+    <div class="card-box profile-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/3048/3048390.png" alt="Groom Icon">
+      <h3>Groom</h3>
+      <p><strong>Name:</strong> Shaik Basheera</p>
+      <p><strong>Father:</strong> Shaik ..</p>
+      <p><strong>Mother:</strong> Shaik Muntaz</p>
+      <p><strong>Address:</strong> Rajahmundry </p>
+    </div>
+
+
+    
     <h2 class="mt-4">Shaik Gouse Basha & Shaik Basheera</h2>
     <p class="lead">Together with their families, joyfully invite you to their Nikah and Reception</p>
 
@@ -137,6 +183,17 @@
       <div class="countdown-labels">
         <span>Days</span> | <span>Hours</span> | <span>Minutes</span> | <span>Seconds</span>
       </div>
+    </div>
+
+    
+    <!-- Wedding Card Download Section -->
+    <div class="card-box text-center">
+      <h3>Download Our Wedding Card</h3>
+      <p>Click below to get a digital copy of our invitation card.</p>
+      <a href="https://raw.githubusercontent.com/your-username/your-repo/main/wedding-card.pdf" download class="btn btn-outline-dark btn-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/159/159078.png" alt="Download Icon" style="width: 24px; vertical-align: middle; margin-right: 8px;">
+        Download Wedding Card (PDF)
+      </a>
     </div>
 
     <blockquote class="blockquote mt-5">
@@ -179,7 +236,6 @@
       update();
     }
 
-    // Initialize countdowns
     initializeCountdown("nikah-countdown", "2025-06-08T11:00:00", "Nikah");
     initializeCountdown("reception-countdown", "2025-06-10T19:00:00", "Reception");
   </script>
@@ -187,7 +243,7 @@
   <!-- Background Music -->
   <audio autoplay loop style="position: fixed; bottom: 1rem; left: 1rem; z-index: 999;">
     <source src="https://cdn.pixabay.com/download/audio/2023/03/21/audio_9c7ff77567.mp3?filename=beautiful-piano-145039.mp3" type="audio/mpeg">
-    
   </audio>
+
 </body>
 </html>
