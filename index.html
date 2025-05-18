@@ -111,8 +111,8 @@
       <h3 class="section-title">Groom</h3>
       <img src="https://raw.githubusercontent.com/WeddingInvite/BashaWedsBasheera/refs/heads/main/cowo.png" alt="Muslim Groom" class="profile-img">
       <p><strong>Name:</strong> Shaik Gouse Basha</p>
-      <p><strong>Father:</strong> Shaik Ahmed</p>
-      <p><strong>Mother:</strong> Shaik Shafiya</p>
+      <p><strong>Father:</strong> Shaik Ahmed Valli</p>
+      <p><strong>Mother:</strong> Shafiya</p>
       <p><strong>Address:</strong> Sangam Colony-2, Mandapeta, East Godavari, 9849667547</p>
     </div>
 
@@ -121,7 +121,7 @@
       <h3 class="section-title">Bride</h3>
       <img src="https://raw.githubusercontent.com/WeddingInvite/BashaWedsBasheera/refs/heads/main/cewe.png" alt="Muslim Bride" class="profile-img">
       <p><strong>Name:</strong> Shaik Basheera</p>
-      <p><strong>Father:</strong> Shaik ....</p>
+      <p><strong>Father:</strong> Shaik Asif</p>
       <p><strong>Mother:</strong> Shaik Muntaz</p>
       <p><strong>Address:</strong> Rajahmundry</p>
     </div>
@@ -135,6 +135,12 @@
       <p><strong>Date:</strong> Sunday, 8th June 2025</p>
       <p><strong>Venue:</strong><br>Bilal Shadi Khana Nehru Nagar, Rajahmundry</p>
       <a href="https://maps.app.goo.gl/RCfQWhs69SQgxJha9?g_st=aw" target="_blank" class="btn btn-success">View Nikah Venue</a>
+      <div class="countdown-wrapper">
+        <div class="countdown" id="nikah-countdown"></div>
+      </div>
+      <div class="countdown-labels">
+        <span>Days</span> | <span>Hours</span> | <span>Minutes</span> | <span>Seconds</span>
+      </div>
     </div>
 
     <div class="my-5">
@@ -142,6 +148,12 @@
       <p><strong>Date:</strong> Tuesday, 10th June 2025</p>
       <p><strong>Venue:</strong><br>Lion's Club Function Hall, Mandapeta</p>
       <a href="https://maps.app.goo.gl/nwwzxgHhwUUQ5V7DA?g_st=aw" target="_blank" class="btn btn-primary">View Reception Venue</a>
+      <div class="countdown-wrapper">
+        <div class="countdown" id="reception-countdown"></div>
+      </div>
+      <div class="countdown-labels">
+        <span>Days</span> | <span>Hours</span> | <span>Minutes</span> | <span>Seconds</span>
+      </div>
     </div>
 
     
@@ -202,5 +214,44 @@
   // Also trigger on focus (more reliable on mobile)
   window.onfocus = restoreWhatsAppButton;
 </script>
+
+  <!-- Countdown Script -->
+  <script>
+    function initializeCountdown(elementId, targetDate, eventName) {
+      const el = document.getElementById(elementId);
+      const target = new Date(targetDate).getTime();
+
+      function update() {
+        const now = new Date().getTime();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          el.textContent = `The ${eventName} has taken place!`;
+          clearInterval(timer);
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        el.textContent = `${days} : ${hours} : ${minutes} : ${seconds}`;
+      }
+
+      const timer = setInterval(update, 1000);
+      update();
+    }
+
+    // Initialize countdowns
+    initializeCountdown("nikah-countdown", "2025-06-08T11:00:00", "Nikah");
+    initializeCountdown("reception-countdown", "2025-06-10T19:00:00", "Reception");
+  </script>
+
+  <!-- Background Music -->
+  <audio autoplay loop style="position: fixed; bottom: 1rem; left: 1rem; z-index: 999;">
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/21/audio_9c7ff77567.mp3?filename=beautiful-piano-145039.mp3" type="audio/mpeg">
+
+  </audio>
 </body>
 </html>
