@@ -150,25 +150,57 @@
     <!-- Wedding Card Download -->
     <div class="mt-5">
       <h3 class="section-title">Download Wedding Card</h3>
-      <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/wedding-card.png" download class="btn btn-card">Download Card</a>
+      <a href="https://raw.githubusercontent.com/WeddingInvite/BashaWedsBasheera/refs/heads/main/ChatGPT%20Image%20May%2018%2C%202025%2C%2001_03_18%20PM.png" download class="btn btn-card">Download Card</a>
     </div>
 
-    <!-- WhatsApp Contact -->
-    <div class="mt-4">
-      <h5>Contact Us</h5>
-      <a href="https://wa.me/916301526098" target="_blank" class="btn btn-whatsapp">WhatsApp: +91 6301526098</a>
-    </div>
+    <!-- ... all your existing HTML code remains unchanged above -->
 
-    <blockquote class="blockquote mt-5">
-      <p>"May Allah bless your marriage and unite both of you in goodness." – Hadith</p>
-    </blockquote>
-  </div>
+<!-- WhatsApp Contact -->
+<div class="mt-4">
+  <h5>Reach out to Basha on WhatsApp</h5>
+  <a id="whatsapp-button" href="https://wa.me/916301526098" target="_blank" class="btn btn-whatsapp">
+    <i class="fab fa-whatsapp"></i> WhatsApp: +91 6301526098
+  </a>
+</div>
 
-  <footer>
-    <small>© 2025 Shaik Gouse Basha & Shaik Basheera | Designed with Love 💖</small>
-  </footer>
+<blockquote class="blockquote mt-5">
+  <p>"May Allah bless your marriage and unite both of you in goodness." – Hadith</p>
+</blockquote>
+</div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+  <small>© 2025 Shaik Gouse Basha & Shaik Basheera | Designed with Love 💖</small>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Font Awesome for WhatsApp icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- WhatsApp Button Restore Logic -->
+<script>
+  const whatsappBtn = document.getElementById('whatsapp-button');
+
+  function restoreWhatsAppButton() {
+    if (whatsappBtn) {
+      whatsappBtn.style.display = 'inline-block';
+      // Restore icon if removed
+      if (!whatsappBtn.innerHTML.includes('fab')) {
+        whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp: +91 6301526098';
+      }
+    }
+  }
+
+  // Trigger on visibility change
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') {
+      restoreWhatsAppButton();
+    }
+  });
+
+  // Also trigger on focus (more reliable on mobile)
+  window.onfocus = restoreWhatsAppButton;
+</script>
 </body>
 </html>
